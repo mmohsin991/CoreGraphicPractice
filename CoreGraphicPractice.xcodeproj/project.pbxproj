@@ -12,6 +12,7 @@
 		42BE920B1B494EA000545092 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42BE920A1B494EA000545092 /* Images.xcassets */; };
 		42BE920E1B494EA000545092 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42BE920C1B494EA000545092 /* LaunchScreen.xib */; };
 		42BE921A1B494EA000545092 /* CoreGraphicPracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE92191B494EA000545092 /* CoreGraphicPracticeTests.swift */; };
+		42DACC961B4D488600048C64 /* PathsAndShapesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DACC951B4D488600048C64 /* PathsAndShapesVC.swift */; };
 		42F0456A1B4C570400B1007D /* ImageFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F045691B4C570400B1007D /* ImageFilter.swift */; };
 		42FF24A01B4958C40061A57A /* ImageViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FF249F1B4958C40061A57A /* ImageViewVC.swift */; };
 /* End PBXBuildFile section */
@@ -36,6 +37,7 @@
 		42BE92131B494EA000545092 /* CoreGraphicPracticeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreGraphicPracticeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		42BE92181B494EA000545092 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42BE92191B494EA000545092 /* CoreGraphicPracticeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreGraphicPracticeTests.swift; sourceTree = "<group>"; };
+		42DACC951B4D488600048C64 /* PathsAndShapesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathsAndShapesVC.swift; sourceTree = "<group>"; };
 		42F045691B4C570400B1007D /* ImageFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFilter.swift; sourceTree = "<group>"; };
 		42FF249F1B4958C40061A57A /* ImageViewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,6 +84,7 @@
 				42BE92031B494EA000545092 /* AppDelegate.swift */,
 				42FF249F1B4958C40061A57A /* ImageViewVC.swift */,
 				42F045691B4C570400B1007D /* ImageFilter.swift */,
+				42DACC951B4D488600048C64 /* PathsAndShapesVC.swift */,
 				42BE92071B494EA000545092 /* Main.storyboard */,
 				42BE920A1B494EA000545092 /* Images.xcassets */,
 				42BE920C1B494EA000545092 /* LaunchScreen.xib */,
@@ -216,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				42F0456A1B4C570400B1007D /* ImageFilter.swift in Sources */,
+				42DACC961B4D488600048C64 /* PathsAndShapesVC.swift in Sources */,
 				42BE92041B494EA000545092 /* AppDelegate.swift in Sources */,
 				42FF24A01B4958C40061A57A /* ImageViewVC.swift in Sources */,
 			);
