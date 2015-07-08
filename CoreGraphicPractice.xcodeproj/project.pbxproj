@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4228F76C1B4DA3A500E03E36 /* CoreGraphicsPart1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4228F76B1B4DA3A500E03E36 /* CoreGraphicsPart1.swift */; };
 		42BE92041B494EA000545092 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE92031B494EA000545092 /* AppDelegate.swift */; };
 		42BE92091B494EA000545092 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42BE92071B494EA000545092 /* Main.storyboard */; };
 		42BE920B1B494EA000545092 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42BE920A1B494EA000545092 /* Images.xcassets */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4228F76B1B4DA3A500E03E36 /* CoreGraphicsPart1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreGraphicsPart1.swift; sourceTree = "<group>"; };
 		42BE91FE1B494EA000545092 /* CoreGraphicPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreGraphicPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42BE92021B494EA000545092 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42BE92031B494EA000545092 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				42FF249F1B4958C40061A57A /* ImageViewVC.swift */,
 				42F045691B4C570400B1007D /* ImageFilter.swift */,
 				42DACC951B4D488600048C64 /* PathsAndShapesVC.swift */,
+				4228F76B1B4DA3A500E03E36 /* CoreGraphicsPart1.swift */,
 				42BE92071B494EA000545092 /* Main.storyboard */,
 				42BE920A1B494EA000545092 /* Images.xcassets */,
 				42BE920C1B494EA000545092 /* LaunchScreen.xib */,
@@ -221,6 +224,7 @@
 				42F0456A1B4C570400B1007D /* ImageFilter.swift in Sources */,
 				42DACC961B4D488600048C64 /* PathsAndShapesVC.swift in Sources */,
 				42BE92041B494EA000545092 /* AppDelegate.swift in Sources */,
+				4228F76C1B4DA3A500E03E36 /* CoreGraphicsPart1.swift in Sources */,
 				42FF24A01B4958C40061A57A /* ImageViewVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
