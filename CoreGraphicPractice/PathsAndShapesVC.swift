@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import QuartzCore
 
 class PathsAndShapesVC: UIViewController {
 
@@ -37,56 +38,77 @@ class PathsAndShapesVC: UIViewController {
 }
 
 
-//@IBDesignable
+@IBDesignable
 class MyView: UIView{
+    
+    // Don't forget to add the background color as clear color.
+    
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.backgroundColor = UIColor.clearColor()
+
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+
+    
     override func drawRect(rect: CGRect) {
 //        
 //         // using Core Graphics
-//        
-//        // obtain the current graphics context
-//        let con = UIGraphicsGetCurrentContext()
-//        // draw a black (by default) vertical line, the shaft of the arrow
-//        CGContextMoveToPoint(con, 100, 100)
-//        CGContextAddLineToPoint(con, 100, 19)
-//        CGContextSetLineWidth(con, 20)
-//        CGContextStrokePath(con)
-//        // draw a red triangle, the point of the arrow
-//        CGContextSetFillColorWithColor(con, UIColor.redColor().CGColor)
-//        CGContextMoveToPoint(con, 80, 25)
-//        CGContextAddLineToPoint(con, 100, 0)
-//        CGContextAddLineToPoint(con, 120, 25)
-//        CGContextFillPath(con)
-//        // snip a triangle out of the shaft by drawing in Clear blend mode
-//        CGContextMoveToPoint(con, 90, 101)
-//        CGContextAddLineToPoint(con, 100, 90)
-//        CGContextAddLineToPoint(con, 110, 101)
-//        CGContextSetBlendMode(con, kCGBlendModeClear)
-//        CGContextFillPath(con)
         
-        
-// using UIKit
-        let p = UIBezierPath()
-        // shaft
-        p.moveToPoint(CGPointMake(100,100))
-        p.addLineToPoint(CGPointMake(100, 19))
-        p.lineWidth = 20
-        p.stroke()
-        // point
-        UIColor.redColor().set()
-        p.removeAllPoints()
-        p.moveToPoint(CGPointMake(80,25))
-        p.addLineToPoint(CGPointMake(100, 0))
-        p.addLineToPoint(CGPointMake(120, 25))
-        p.fill()
 
-        // snip
-        p.removeAllPoints()
         
-        p.moveToPoint(CGPointMake(90,101))
-        p.addLineToPoint(CGPointMake(100, 90))
-        p.addLineToPoint(CGPointMake(110, 101))
-        //p.fillWithBlendMode(kCGBlendModeClear, alpha:1.0)
-        p.fill()
+        // obtain the current graphics context
+        let con = UIGraphicsGetCurrentContext()
+        
+
+        // draw a black (by default) vertical line, the shaft of the arrow
+        CGContextMoveToPoint(con, 100, 100)
+        CGContextAddLineToPoint(con, 100, 19)
+        CGContextSetLineWidth(con, 20)
+        CGContextSetStrokeColorWithColor(con, UIColor.blueColor().CGColor)
+        CGContextStrokePath(con)
+        // draw a red triangle, the point of the arrow
+        CGContextSetFillColorWithColor(con, UIColor.redColor().CGColor)
+        CGContextMoveToPoint(con, 80, 25)
+        CGContextAddLineToPoint(con, 100, 0)
+        CGContextAddLineToPoint(con, 120, 25)
+        CGContextFillPath(con)
+        // snip a triangle out of the shaft by drawing in Clear blend mode
+        CGContextMoveToPoint(con, 90, 101)
+        CGContextAddLineToPoint(con, 100, 90)
+        CGContextAddLineToPoint(con, 110, 101)
+        CGContextSetBlendMode(con, kCGBlendModeClear)
+        CGContextFillPath(con)
+        
+        
+
+
+        // using UIKit
+//        let p = UIBezierPath()
+//        // shaft
+//        p.moveToPoint(CGPointMake(100,100))
+//        p.addLineToPoint(CGPointMake(100, 19))
+//        p.lineWidth = 20
+//        p.stroke()
+//        // point
+//        UIColor.redColor().set()
+//        p.removeAllPoints()
+//        p.moveToPoint(CGPointMake(80,25))
+//        p.addLineToPoint(CGPointMake(100, 0))
+//        p.addLineToPoint(CGPointMake(120, 25))
+//        p.fill()
+//
+//        // snip
+//        p.removeAllPoints()
+//        
+//        p.moveToPoint(CGPointMake(90,101))
+//        p.addLineToPoint(CGPointMake(100, 90))
+//        p.addLineToPoint(CGPointMake(110, 101))
+//        //p.fillWithBlendMode(kCGBlendModeClear, alpha:1.0)
+//        p.fill()
         
         
        

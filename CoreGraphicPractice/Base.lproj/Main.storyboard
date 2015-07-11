@@ -29,6 +29,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="370" y="366"/>
         </scene>
         <!--Image Filter-->
         <scene sceneID="fz5-jr-Wgh">
@@ -78,7 +79,7 @@
                                 <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.27565396930000002" green="0.71155532529999999" blue="0.44735637680000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
@@ -141,7 +142,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.27565396930000002" green="0.71155532529999999" blue="0.44735637680000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="Vkn-49-lvw" appends="YES" id="coN-ea-pDn"/>
@@ -243,8 +244,48 @@
             </objects>
             <point key="canvasLocation" x="1570" y="366"/>
         </scene>
+        <!--My LayerVC-->
+        <scene sceneID="w4A-8V-Rsv">
+            <objects>
+                <viewController id="N6Y-DY-DnG" customClass="MyLayerVC" customModule="CoreGraphicPractice" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4C7-az-OVo"/>
+                        <viewControllerLayoutGuide type="bottom" id="dSc-ha-NKD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Yjc-Sb-a8M">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zLS-2t-aSl">
+                                <rect key="frame" x="81" y="61" width="133" height="114"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LAU-bS-iub" customClass="MyButton" customModule="CoreGraphicPractice" customModuleProvider="target">
+                                <rect key="frame" x="134" y="290" width="80" height="80"/>
+                                <color key="backgroundColor" red="0.35796466240000002" green="0.76267538270000002" blue="0.46023961699999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="serach icon">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HdN-L1-qmp" customClass="MyTwitterView" customModule="CoreGraphicPractice" customModuleProvider="target">
+                                <rect key="frame" x="94" y="411" width="100" height="98"/>
+                                <color key="backgroundColor" red="0.96862745100000003" green="0.15289247550000001" blue="0.2372275291" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="myView" destination="zLS-2t-aSl" id="Set-d9-Ybr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BXx-oK-eLe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2321" y="366"/>
+        </scene>
     </scenes>
     <resources>
         <image name="background" width="305" height="229"/>
+        <image name="serach icon" width="26" height="26"/>
     </resources>
 </document>

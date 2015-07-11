@@ -24,7 +24,6 @@ class CoreGraphicsPart2: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 
@@ -73,6 +72,18 @@ class MyGraphView: UIView {
     //Weekly sample data
     var graphPoints:[Int] = [4, 2, 6, 4, 5, 8, 3]
     
+    
+    override init(frame: CGRect) {
+        
+        super.init(frame: frame)
+        
+    }
+
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.backgroundColor = UIColor.clearColor()
+ 
+    }
     
     
     
@@ -205,6 +216,7 @@ class MyGraphView: UIView {
         
         CGContextDrawLinearGradient(context, gradient, startPoint, endPoint, 0)
         
+
         // restore the graphic context
         CGContextRestoreGState(context)
         
@@ -219,10 +231,18 @@ class MyGraphView: UIView {
             let circle = UIBezierPath(ovalInRect:
                 CGRect(origin: point,
                     size: CGSize(width: 5.0, height: 5.0)))
+            
+            
             circle.fill()
+            
+            circle.lineWidth = 3.0
+            // if you want to whole in layer then use this
+//            circle.fillWithBlendMode(kCGBlendModeClear, alpha: 1.0)
+//            circle.strokeWithBlendMode(kCGBlendModeClear, alpha: 1.0)
+            
+            
         }
      
-        
         
         
         
@@ -250,6 +270,9 @@ class MyGraphView: UIView {
         
         linePath.lineWidth = 1.0
         linePath.stroke()
+        
+        
+        
     }
 
 }

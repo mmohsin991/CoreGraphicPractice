@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4228F76C1B4DA3A500E03E36 /* CoreGraphicsPart1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4228F76B1B4DA3A500E03E36 /* CoreGraphicsPart1.swift */; };
+		423F71511B50FE2100667533 /* MyLayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423F71501B50FE2100667533 /* MyLayerVC.swift */; };
+		423F71531B5108E100667533 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 423F71521B5108E100667533 /* QuartzCore.framework */; };
 		42A84C3D1B4E8EEB0020FB01 /* CoreGraphicsPart2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A84C3C1B4E8EEB0020FB01 /* CoreGraphicsPart2.swift */; };
 		42BE92041B494EA000545092 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE92031B494EA000545092 /* AppDelegate.swift */; };
 		42BE92091B494EA000545092 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42BE92071B494EA000545092 /* Main.storyboard */; };
@@ -31,6 +33,8 @@
 
 /* Begin PBXFileReference section */
 		4228F76B1B4DA3A500E03E36 /* CoreGraphicsPart1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreGraphicsPart1.swift; sourceTree = "<group>"; };
+		423F71501B50FE2100667533 /* MyLayerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyLayerVC.swift; sourceTree = "<group>"; };
+		423F71521B5108E100667533 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		42A84C3C1B4E8EEB0020FB01 /* CoreGraphicsPart2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreGraphicsPart2.swift; sourceTree = "<group>"; };
 		42BE91FE1B494EA000545092 /* CoreGraphicPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreGraphicPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42BE92021B494EA000545092 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				423F71531B5108E100667533 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +72,7 @@
 		42BE91F51B494E9F00545092 = {
 			isa = PBXGroup;
 			children = (
+				423F71521B5108E100667533 /* QuartzCore.framework */,
 				42BE92001B494EA000545092 /* CoreGraphicPractice */,
 				42BE92161B494EA000545092 /* CoreGraphicPracticeTests */,
 				42BE91FF1B494EA000545092 /* Products */,
@@ -91,6 +97,7 @@
 				42DACC951B4D488600048C64 /* PathsAndShapesVC.swift */,
 				4228F76B1B4DA3A500E03E36 /* CoreGraphicsPart1.swift */,
 				42A84C3C1B4E8EEB0020FB01 /* CoreGraphicsPart2.swift */,
+				423F71501B50FE2100667533 /* MyLayerVC.swift */,
 				42BE92071B494EA000545092 /* Main.storyboard */,
 				42BE920A1B494EA000545092 /* Images.xcassets */,
 				42BE920C1B494EA000545092 /* LaunchScreen.xib */,
@@ -228,6 +235,7 @@
 				42DACC961B4D488600048C64 /* PathsAndShapesVC.swift in Sources */,
 				42BE92041B494EA000545092 /* AppDelegate.swift in Sources */,
 				4228F76C1B4DA3A500E03E36 /* CoreGraphicsPart1.swift in Sources */,
+				423F71511B50FE2100667533 /* MyLayerVC.swift in Sources */,
 				42FF24A01B4958C40061A57A /* ImageViewVC.swift in Sources */,
 				42A84C3D1B4E8EEB0020FB01 /* CoreGraphicsPart2.swift in Sources */,
 			);
