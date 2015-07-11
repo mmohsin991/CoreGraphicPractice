@@ -57,6 +57,13 @@ class CoreGraphicsPart1: UIViewController {
         counterLabel.text = String(counterView.counter)
 
         
+        
+        UIView.transitionWithView(self.counterView, duration: 2.0, options: .TransitionFlipFromLeft, animations: { () -> Void in
+
+
+            
+        }, completion: nil)
+        
     }
 
 }
