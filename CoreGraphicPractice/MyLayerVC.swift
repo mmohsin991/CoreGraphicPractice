@@ -244,7 +244,7 @@ class MyTwitterView: UIView {
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         let imageView = UIImageView(image: UIImage(named: "TwitterLogo")! )
-        imageView.frame = CGRect(x: 0, y: 0, width: 80, height: 80)
+        imageView.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
        // self.addSubview(imageView)
 
        self.layer.mask = imageView.layer
