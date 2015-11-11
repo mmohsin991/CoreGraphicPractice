@@ -58,7 +58,7 @@ class ImageFilter: UIViewController {
         println(properties)
         
         for filterName: AnyObject in properties {
-            let fltr = CIFilter(name:filterName as String)
+            let fltr = CIFilter(name:filterName as! String)
             println(fltr.attributes())
         }
     }

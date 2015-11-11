@@ -196,7 +196,7 @@ class MyGraphView: UIView {
         CGContextSaveGState(context)
         
         //2 - make a copy of the path
-        var clippingPath = graphPath.copy() as UIBezierPath
+        var clippingPath = graphPath.copy() as! UIBezierPath
         
         //3 - add lines to the copied path to complete the clip area
         clippingPath.addLineToPoint(CGPoint(
