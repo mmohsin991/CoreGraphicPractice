@@ -43,7 +43,7 @@ class MyView: UIView{
     
     // Don't forget to add the background color as clear color.
     
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.backgroundColor = UIColor.clearColor()
 
@@ -80,7 +80,7 @@ class MyView: UIView{
         CGContextMoveToPoint(con, 90, 101)
         CGContextAddLineToPoint(con, 100, 90)
         CGContextAddLineToPoint(con, 110, 101)
-        CGContextSetBlendMode(con, kCGBlendModeClear)
+        CGContextSetBlendMode(con, CGBlendMode.Clear)
         CGContextFillPath(con)
         
         

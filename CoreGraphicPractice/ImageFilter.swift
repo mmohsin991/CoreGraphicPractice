@@ -27,23 +27,23 @@ class ImageFilter: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        let beginImage = CIImage(image: self.inputImg.image)
+        let beginImage = CIImage(image: self.inputImg.image!)
         
         
         // eg filter 1
         let invert = CIFilter(name:"CIColorInvert")
-        invert.setValue(beginImage, forKey: "inputImage")
+        invert?.setValue(beginImage, forKey: "inputImage")
         
         
         // eg filter 2
         let vignette = CIFilter(name:"CIVignette")
-        vignette.setValue(beginImage, forKey: "inputImage")
-        vignette.setValue(0.4 * 2, forKey:"inputIntensity")
-        vignette.setValue(0.6 * 30, forKey:"inputRadius")
+        vignette?.setValue(beginImage, forKey: "inputImage")
+        vignette?.setValue(0.4 * 2, forKey:"inputIntensity")
+        vignette?.setValue(0.6 * 30, forKey:"inputRadius")
 
         
         // show the output image
-        self.outputImg.image = UIImage(CIImage: vignette.outputImage)
+        self.outputImg.image = UIImage(CIImage: vignette!.outputImage!)
         
         
     }
@@ -55,11 +55,10 @@ class ImageFilter: UIViewController {
     // helper function
     func printAllFilters() {
         let properties = CIFilter.filterNamesInCategory(kCICategoryBuiltIn)
-        println(properties)
+        print(properties)
         
         for filterName: AnyObject in properties {
             let fltr = CIFilter(name:filterName as! String)
-            println(fltr.attributes())
         }
     }
 

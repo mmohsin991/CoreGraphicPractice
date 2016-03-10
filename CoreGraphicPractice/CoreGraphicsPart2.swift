@@ -39,8 +39,7 @@ class CoreGraphicsPart2: UIViewController {
             UIView.transitionFromView(self.graphView,
                 toView: self.counterView,
                 duration: 1.0,
-                options: UIViewAnimationOptions.TransitionFlipFromLeft
-                    | UIViewAnimationOptions.ShowHideTransitionViews,
+                options: [UIViewAnimationOptions.TransitionFlipFromLeft, UIViewAnimationOptions.ShowHideTransitionViews],
                 completion:nil)
         } else {
             
@@ -48,8 +47,7 @@ class CoreGraphicsPart2: UIViewController {
             UIView.transitionFromView(self.counterView,
                 toView: self.graphView,
                 duration: 1.0,
-                options: UIViewAnimationOptions.TransitionFlipFromRight
-                    | UIViewAnimationOptions.ShowHideTransitionViews,
+                options: [UIViewAnimationOptions.TransitionFlipFromRight, UIViewAnimationOptions.ShowHideTransitionViews],
                 completion: nil)
         }
         isGraphViewShowing = !isGraphViewShowing
@@ -79,7 +77,7 @@ class MyGraphView: UIView {
         
     }
 
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.backgroundColor = UIColor.clearColor()
  
@@ -99,7 +97,7 @@ class MyGraphView: UIView {
         let height = rect.height
         
         //set up background clipping area
-        var path = UIBezierPath(roundedRect: rect,
+        let path = UIBezierPath(roundedRect: rect,
             byRoundingCorners: UIRectCorner.AllCorners,
             cornerRadii: CGSize(width: 8.0, height: 8.0))
         path.addClip()
@@ -124,13 +122,13 @@ class MyGraphView: UIView {
             colorLocations)
         
         //5 - draw the gradient
-        var startPoint = CGPoint.zeroPoint
+        var startPoint = CGPoint.zero
         var endPoint = CGPoint(x:0, y:self.bounds.height)
         CGContextDrawLinearGradient(context,
             gradient,
             startPoint,
             endPoint,
-            0)
+            [])
     
     
         
@@ -140,7 +138,7 @@ class MyGraphView: UIView {
         //calculate the x point
         
         let margin:CGFloat = 20.0
-        var columnXPoint = { (column:Int) -> CGFloat in
+        let columnXPoint = { (column:Int) -> CGFloat in
             //Calculate gap between points
             let spacer = (width - margin*2 - 4) /
                 CGFloat((self.graphPoints.count - 1))
@@ -154,8 +152,8 @@ class MyGraphView: UIView {
         let topBorder:CGFloat = 60
         let bottomBorder:CGFloat = 50
         let graphHeight = height - topBorder - bottomBorder
-        let maxValue = maxElement(graphPoints)
-        var columnYPoint = { (graphPoint:Int) -> CGFloat in
+        let maxValue = graphPoints.maxElement()!
+        let columnYPoint = { (graphPoint:Int) -> CGFloat in
             var y:CGFloat = CGFloat(graphPoint) /
                 CGFloat(maxValue) * graphHeight
             y = graphHeight + topBorder - y // Flip the graph
@@ -171,7 +169,7 @@ class MyGraphView: UIView {
         UIColor.whiteColor().setStroke()
         
         //set up the points line
-        var graphPath = UIBezierPath()
+        let graphPath = UIBezierPath()
         //go to start of line
         graphPath.moveToPoint(CGPoint(x:columnXPoint(0),
             y:columnYPoint(graphPoints[0])))
@@ -196,7 +194,7 @@ class MyGraphView: UIView {
         CGContextSaveGState(context)
         
         //2 - make a copy of the path
-        var clippingPath = graphPath.copy() as! UIBezierPath
+        let clippingPath = graphPath.copy() as! UIBezierPath
         
         //3 - add lines to the copied path to complete the clip area
         clippingPath.addLineToPoint(CGPoint(
@@ -214,7 +212,7 @@ class MyGraphView: UIView {
         startPoint = CGPoint(x:margin, y: highestYPoint)
         endPoint = CGPoint(x:margin, y:self.bounds.height)
         
-        CGContextDrawLinearGradient(context, gradient, startPoint, endPoint, 0)
+        CGContextDrawLinearGradient(context, gradient, startPoint, endPoint, [])
         
 
         // restore the graphic context
@@ -237,8 +235,8 @@ class MyGraphView: UIView {
             
             circle.lineWidth = 3.0
             // if you want to whole in layer then use this
-//            circle.fillWithBlendMode(kCGBlendModeClear, alpha: 1.0)
-//            circle.strokeWithBlendMode(kCGBlendModeClear, alpha: 1.0)
+            circle.fillWithBlendMode(CGBlendMode.Clear, alpha: 1.0)
+            circle.strokeWithBlendMode(CGBlendMode.Clear, alpha: 1.0)
             
             
         }
@@ -247,7 +245,7 @@ class MyGraphView: UIView {
         
         
         //Draw horizontal graph lines on the top of everything
-        var linePath = UIBezierPath()
+        let linePath = UIBezierPath()
         
         //top line
         linePath.moveToPoint(CGPoint(x:margin, y: topBorder))

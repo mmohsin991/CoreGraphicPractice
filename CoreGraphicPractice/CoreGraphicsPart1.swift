@@ -91,7 +91,7 @@ class MyButtonView: UIButton {
         let plusWidth: CGFloat = min(bounds.width, bounds.height) * 0.6
         
         //create the path
-        var plusPath = UIBezierPath()
+        let plusPath = UIBezierPath()
         
         //set the path's line width to the height of the stroke
         plusPath.lineWidth = plusHeight
@@ -163,7 +163,7 @@ let π:CGFloat = CGFloat(M_PI)
         let endAngle: CGFloat = π / 4
         
         // 5
-        var path = UIBezierPath(arcCenter: center,
+        let path = UIBezierPath(arcCenter: center,
             radius: radius/2 - arcWidth/2,
             startAngle: startAngle,
             endAngle: endAngle,
@@ -190,7 +190,7 @@ let π:CGFloat = CGFloat(M_PI)
         let outlineEndAngle = arcLengthPerGlass * CGFloat(counter) + startAngle
         
         //2 - draw the outer arc
-        var outlinePath = UIBezierPath(arcCenter: center,
+        let outlinePath = UIBezierPath(arcCenter: center,
             radius: bounds.width/2 - 2.5,
             startAngle: startAngle,
             endAngle: outlineEndAngle,
@@ -222,7 +222,7 @@ let π:CGFloat = CGFloat(M_PI)
         let markerSize:CGFloat = 12.0
         
         //2 - the marker rectangle positioned at the top left
-        var markerPath = UIBezierPath(rect:
+        let markerPath = UIBezierPath(rect:
             CGRect(x: -markerWidth/2,
                 y: 0,
                 width: markerWidth,
@@ -238,7 +238,7 @@ let π:CGFloat = CGFloat(M_PI)
             CGContextSaveGState(context)
             
             //5 - calculate the rotation angle
-            var angle = arcLengthPerGlass * CGFloat(i) + startAngle - π/2
+            let angle = arcLengthPerGlass * CGFloat(i) + startAngle - π/2
             
             //rotate and translate
             CGContextRotateCTM(context, angle)

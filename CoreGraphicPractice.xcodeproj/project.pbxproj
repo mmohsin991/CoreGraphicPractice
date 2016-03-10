@@ -175,6 +175,8 @@
 		42BE91F61B494E9F00545092 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0720;
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0620;
 				ORGANIZATIONNAME = PanaCloud;
 				TargetAttributes = {

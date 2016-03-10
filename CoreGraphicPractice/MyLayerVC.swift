@@ -85,8 +85,8 @@ class MyLayer: CALayer {
     
     
     
-    override func drawInContext(ctx: CGContext!) {
-            println(ctx)
+    override func drawInContext(ctx: CGContext) {
+            print(ctx)
 //            
 //            let colors = [UIColor.greenColor().CGColor, UIColor.redColor().CGColor]
 //            
@@ -148,7 +148,7 @@ class MyLayer: CALayer {
         
         // the four cardinal points
         let pts = "NESW"
-        for (ix,c) in enumerate(pts) {
+        for (ix,c) in pts.characters.enumerate() {
             let t = CATextLayer()
             t.contentsScale = UIScreen.mainScreen().scale
             t.string = String(c)
@@ -195,7 +195,7 @@ class MyLayer: CALayer {
 
 class MyArrow: CALayer {
     
-    override func drawInContext(ctx: CGContext!) {
+    override func drawInContext(ctx: CGContext) {
         
         CGContextSetFillColorWithColor(ctx, UIColor.redColor().CGColor)
 
@@ -210,7 +210,7 @@ class MyArrow: CALayer {
 
 class MyButton: UIButton {
     
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
         self.layer.cornerRadius = self.bounds.height/2
@@ -222,7 +222,7 @@ class MyButton: UIButton {
         
     }
     
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         super.touchesBegan(touches, withEvent: event)
         
         self.layer.shadowRadius = 10.0
@@ -230,7 +230,7 @@ class MyButton: UIButton {
         
     }
     
-    override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
+    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
         super.touchesEnded(touches, withEvent: event)
         
         self.layer.shadowRadius = 5.0
@@ -241,7 +241,7 @@ class MyButton: UIButton {
 
 class MyTwitterView: UIView {
     
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         let imageView = UIImageView(image: UIImage(named: "TwitterLogo")! )
         imageView.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
